@@ -1,0 +1,155 @@
+Feature name	Category	Subcategory	Description	Notes
+sex	Demographic	Static	Sex	0=female, 1=male, 2=other
+race_white	Demographic	Static	Race, white	
+race_black	Demographic	Static	Race, black	
+race_hispanic	Demographic	Static	Race, hispanic	
+race_asian	Demographic	Static	Race, asian	
+race_other	Demographic	Static	Race, other	
+birthyear	Demographic	Static	Birth year	
+educ	Demographic	Static	Education level	higher = more education
+height	Demographic	Static	Height, in inches	
+weight	Demographic	Static	Weight, in lbs	
+bmi	Demographic	Static	BMI	calculated with height and weight using formula
+pregnant	Demographic	Static	Pregnant, at baseline	boolean
+birth	Demographic	Static	Given birth, past year	boolean
+trauma	Demographic	Static	Experienced trauma resulting in injury (e.g. accident, fall), past year	boolean
+insurance	Demographic	Static	Has health insurance	boolean
+money	Demographic	Static	Sufficient money, past month	higher = worse off
+money_assistance	Demographic	Static	Money assistance from government, past month	boolean
+household	Demographic	Static	Number of individuals in household	integer
+comorbid_cancer	Demographic	Static	Diagnosed: cancer	boolean
+comorbid_diabetes_typ1	Demographic	Static	Diagnosed: type 1 diabetes	boolean
+comorbid_diabetes_typ2	Demographic	Static	Diagnosed: type 2 diabetes	boolean
+comorbid_gout	Demographic	Static	Diagnosed: gout	boolean
+comorbid_migraines	Demographic	Static	Diagnosed: migraines	boolean
+comorbid_ms	Demographic	Static	Diagnosed: multiple sclerosis	boolean
+comorbid_osteoporosis	Demographic	Static	Diagnosed: osteoporosis	boolean
+comorbid_neuropathic	Demographic	Static	Diagnosed: fibromyalgia, peripheral neuropathic pain, central neuropathic pain (sum)	0-3
+comorbid_arthritis	Demographic	Static	Diagnosed: osteoarthritis, rheumatoid arthritis (sum)	0-2
+num_migraine_days	Demographic	Static	Number of migraines days, per month, on average	categories, check questionnaire for mapping
+meds_migraine	Demographic	Static	Takes daily prescription migraine medication, at baseline	boolean
+med_start	Demographic	Dynamic	Started a new medication, past month	0-1
+med_stop	Demographic	Dynamic	Stopped a medication, past month	0-1
+med_dose	Demographic	Dynamic	Changed dosage of at least one medication, past month	0-1
+nonmed_start	Demographic	Dynamic	Started new non-medication therapy, past month	0-1
+nonmed_stop	Demographic	Dynamic	Stopped non-medication therapy, past month	0-1
+med_nonmed_dnu	Demographic	Dynamic	Do not take medication/non-medication therapies	0-1
+life_meditation	Demographic	Dynamic	Started meditation/other relaxation techniques, past month	0-1
+life_stress	Demographic	Dynamic	Reduced stress-inducing activities, past month	0-1
+life_activity_eating	Demographic	Dynamic	Increased physical activity or improved eating habits, past month	0-1
+life_red_stop_alcoh	Demographic	Dynamic	Reduced or stopped alcohol consumption, past month	0-1
+steps_awake_mean	Steps	Statistics	Mean number of steps taken while awake	
+steps_mvpa_iqr	Steps	Statistics	IQR of number of minutes with MVPA-range steps	
+steps_lpa_iqr	Steps	Statistics	IQR of number of minutes with LPA-range steps	
+steps_awake_sum_iqr	Steps	Statistics	IQR of number of steps taken while awake	
+steps__active_day_count_	Steps	Statistics	Number of days with >10k steps, last 7 days	
+steps__sedentary_day_count_	Steps	Statistics	Number of days with <5k steps, last 7 days	
+steps_mvpa_sum_recent	Steps	Statistics	Number of MVPA-range step minutes, last 4 days	
+steps_lpa_sum_recent	Steps	Statistics	Number of LPA-range step minutes, last 4 days	
+steps_rolling_6_median_recent	Steps	Statistics	Median number of 6 minute rolling number of steps, last 4 days	
+steps_rolling_6_max_recent	Steps	Statistics	Max number of 6 minute rolling number of steps, last 4 days	
+steps__awake__sum__score	Steps	Linear regression		
+steps__awake__sum__intercept	Steps	Linear regression		
+steps__awake__sum__coeff	Steps	Linear regression		
+steps__mvpa__sum__score	Steps	Linear regression		
+steps__mvpa__sum__intercept	Steps	Linear regression		
+steps__mvpa__sum__coeff	Steps	Linear regression		
+steps__light_activity__sum__score	Steps	Linear regression		
+steps__light_activity__sum__intercept	Steps	Linear regression		
+steps__light_activity__sum__coeff	Steps	Linear regression		
+steps__rolling_6_sum__max__score	Steps	Linear regression		
+steps__rolling_6_sum__max__intercept	Steps	Linear regression		
+steps__rolling_6_sum__max__coeff	Steps	Linear regression		
+steps__streaks__countDistinct__score	Steps	Linear regression		
+steps__streaks__countDistinct__intercept	Steps	Linear regression		
+steps__streaks__countDistinct__coeff	Steps	Linear regression		
+steps__not_moving__sum__score	Steps	Linear regression		
+steps__not_moving__sum__intercept	Steps	Linear regression		
+steps__not_moving__sum__coeff	Steps	Linear regression		
+steps__awake__sum__score_	Steps	Linear regression		
+steps__awake__sum__intercept_	Steps	Linear regression		
+steps__awake__sum__coeff_	Steps	Linear regression		
+steps__mvpa__sum__score_	Steps	Linear regression		
+steps__mvpa__sum__intercept_	Steps	Linear regression		
+steps__mvpa__sum__coeff_	Steps	Linear regression		
+steps__light_activity__sum__score_	Steps	Linear regression		
+steps__light_activity__sum__intercept_	Steps	Linear regression		
+steps__light_activity__sum__coeff_	Steps	Linear regression		
+steps__rolling_6_sum__max__score_	Steps	Linear regression		
+steps__rolling_6_sum__max__intercept_	Steps	Linear regression		
+steps__rolling_6_sum__max__coeff_	Steps	Linear regression		
+steps__streaks__countDistinct__score_	Steps	Linear regression		
+steps__streaks__countDistinct__intercept_	Steps	Linear regression		
+steps__streaks__countDistinct__coeff_	Steps	Linear regression		
+steps__not_moving__sum__score_	Steps	Linear regression		
+steps__not_moving__sum__intercept_	Steps	Linear regression		
+steps__not_moving__sum__coeff_	Steps	Linear regression		
+sleep_asleep_weekday_mean	Sleep	Statistics	Mean number of minutes asleep per night on weekdays	
+sleep_asleep_weekend_mean	Sleep	Statistics	Mean number of minutes asleep per night on weekends	
+sleep_in_bed_weekday_mean	Sleep	Statistics	Mean number of minutes in bed per night on weekdays	
+sleep_in_bed_weekend_mean	Sleep	Statistics	Mean number of minutes in bed per night on weekends	
+sleep_ratio_asleep_in_bed_weekday_mean	Sleep	Statistics	Mean ratio between number of minutes asleep / in bed on weekdays	
+sleep_ratio_asleep_in_bed_weekend_mean	Sleep	Statistics	Mean ratio between number of minutes asleep / in bed on weekends	
+sleep_in_bed_iqr	Sleep	Statistics	IQR of minutes in bed per night	
+sleep_asleep_iqr	Sleep	Statistics	IQR of minutes asleep per night	
+sleep_ratio_asleep_in_bed_iqr	Sleep	Statistics	IQR of ratio between number of minutes asleep / in bed	
+sleep_main_start_hour_adj_median	Sleep	Statistics	Median start hour of main sleep	0-30+ (adjusted so that 4am next day = 28)
+sleep_main_start_hour_adj_iqr	Sleep	Statistics	IQR of start hour of main sleep	
+sleep_main_start_hour_adj_range	Sleep	Statistics	Max start hour of main sleep - min start hour of main sleep	
+sleep__hypersomnia_count_	Sleep	Statistics	Number of nights with >10 hours asleep, last 7 days	
+sleep__hyposomnia_count_	Sleep	Statistics	Number of nights with <5 hours asleep, last 7 days	
+sleep_asleep_mean_recent	Sleep	Statistics	Mean number of minutes asleep per night, last 4 days	
+sleep_in_bed_mean_recent	Sleep	Statistics	Mean number of minutes in bed per night, last 4 days	
+sleep_ratio_asleep_in_bed_mean_recent	Sleep	Statistics	Mean ratio between number of minutes asleep / in bed, last 4 days	
+sleep__main_start_hour_adj__score	Sleep	Linear regression		
+sleep__main_start_hour_adj__intercept	Sleep	Linear regression		
+sleep__main_start_hour_adj__coeff	Sleep	Linear regression		
+sleep__nap_count__score	Sleep	Linear regression		
+sleep__nap_count__intercept	Sleep	Linear regression		
+sleep__nap_count__coeff	Sleep	Linear regression		
+sleep__total_asleep_minutes__score	Sleep	Linear regression		
+sleep__total_asleep_minutes__intercept	Sleep	Linear regression		
+sleep__total_asleep_minutes__coeff	Sleep	Linear regression		
+sleep__main_efficiency__score	Sleep	Linear regression		
+sleep__main_efficiency__intercept	Sleep	Linear regression		
+sleep__main_efficiency__coeff	Sleep	Linear regression		
+sleep__awake__sum__score	Sleep	Linear regression		
+sleep__awake__sum__intercept	Sleep	Linear regression		
+sleep__awake__sum__coeff	Sleep	Linear regression		
+sleep__total_in_bed_minutes__score	Sleep	Linear regression		
+sleep__total_in_bed_minutes__intercept	Sleep	Linear regression		
+sleep__total_in_bed_minutes__coeff	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__score	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__intercept	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__coeff	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__score	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__intercept	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__coeff	Sleep	Linear regression		
+sleep__main_start_hour_adj__score_	Sleep	Linear regression		
+sleep__main_start_hour_adj__intercept_	Sleep	Linear regression		
+sleep__main_start_hour_adj__coeff_	Sleep	Linear regression		
+sleep__nap_count__score_	Sleep	Linear regression		
+sleep__nap_count__intercept_	Sleep	Linear regression		
+sleep__nap_count__coeff_	Sleep	Linear regression		
+sleep__total_asleep_minutes__score_	Sleep	Linear regression		
+sleep__total_asleep_minutes__intercept_	Sleep	Linear regression		
+sleep__total_asleep_minutes__coeff_	Sleep	Linear regression		
+sleep__main_efficiency__score_	Sleep	Linear regression		
+sleep__main_efficiency__intercept_	Sleep	Linear regression		
+sleep__main_efficiency__coeff_	Sleep	Linear regression		
+sleep__awake__sum__score_	Sleep	Linear regression		
+sleep__awake__sum__intercept_	Sleep	Linear regression		
+sleep__awake__sum__coeff_	Sleep	Linear regression		
+sleep__total_in_bed_minutes__score_	Sleep	Linear regression		
+sleep__total_in_bed_minutes__intercept_	Sleep	Linear regression		
+sleep__total_in_bed_minutes__coeff_	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__score_	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__intercept_	Sleep	Linear regression		
+sleep__awake_regions__countDistinct__coeff_	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__score_	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__intercept_	Sleep	Linear regression		
+sleep_ratio_asleep_in_bed__coeff_	Sleep	Linear regression		
+phq9_cat_end	PHQ-9	PHQ-9 category	PHQ-9 category at the end of the 3 month period	0-4
+phq9_cat_start	PHQ-9	PHQ-9 category	PHQ-9 category at the start of the 3 month period	0-4
+phq9_score_end	PHQ-9	PHQ-9 score	PHQ-9 score at the end of the 3 month period	0-27
+phq9_score_start	PHQ-9	PHQ-9 score	PHQ-9 score at the start of the 3 month period	0-27
