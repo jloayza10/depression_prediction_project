@@ -1,0 +1,15 @@
+DataFrame,Shape,Comments
+df_input,"(33320, 127)",Complete cleaned input data
+df_study,"(9227, 87)",Cleaned + filtered input data based on paper's specifications + deleted features missing >10% data
+data,"(9227, 83)",df_study without target variables
+target_cat,"(9227,)",target phq9_cat_end from df_study
+data_train,"(8304, 83)",90% of df data for model training
+data_test,"(923, 83)",10% of df data for model testing
+target_train,"(8304,)",90% of df target_cat for model training
+target_test,"(923,)",10% of df target_cat for model testing
+X_train_full,"(8304, 143)",data_train df with all additional feature engineering columns (+50)
+X_train_full_preprocessed,"(8304, 145)","X_train_full df with preprocessing (imputation, scaling...)"
+data_add_features,"(9227, 143)",data df with additional features (+50)
+X_test_full,"(923, 143)",data_test df with all additional feature engineering columns (+50)
+X_test_full_preprocessed,"(923, 145)","X_test_full df with preprocessing (imputation, scaling...)"
+data_add_features_preprocessed,"(9227, 145)",data_add_features df with preprocessing
