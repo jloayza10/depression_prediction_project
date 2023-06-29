@@ -4,7 +4,7 @@ This is a machine learning project focused on analyzing and predicting the sever
 
 ## Dataset
 
-The dataset used in this project is obtained from the paper by Makhmutova et al. [1], which can be found [here](https://github.com/jloayza10/depression_prediction_project/blob/master/data/raw/makhmutova2021.pdf). It consists of self-reported health data collected over a one-year period.
+The dataset used in this project is obtained from the paper by Makhmutova et al. [1], which can be found [here](https://github.com/jloayza10/depression_prediction_project/blob/main/data/raw/makhmutova2021.pdf). It consists of self-reported health data collected over a one-year period.
 
 ## Project Steps
 
