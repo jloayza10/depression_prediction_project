@@ -1,5 +1,6 @@
 import pickle
 import pandas as pd
+from flask import Flask, request, jsonify
 
 with open('xgboost_mod.bin', 'rb') as f_in:
     model = pickle.load(f_in)
@@ -28,7 +29,7 @@ def load_list_from_pkl(file_path):
 
 cols_to_del = load_list_from_pkl(list_path+'cols_to_del.pkl')
 selected_features_2 = load_list_from_pkl('../data/lists/selected_features_2.pkl')
-print(f'Type of selected features: {type(selected_features_2)}')
+
 
 def read_data(input):
     df = pd.DataFrame.from_dict([input])
@@ -62,3 +63,22 @@ def predict(df):
     preds = model.predict(df)
     print(f'-----------------Finished prediction-----------------')
     return float(preds)
+
+app = Flask('depression-prediction')
+
+@app.route('/predict', methods=['POST'])
+def predict_endpoint():
+    user = request.get_json()
+
+    df = read_data(user)
+    pred = predict(df)
+
+    result = {
+        'depression severity': pred
+    }
+
+    return jsonify(result)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=9696)

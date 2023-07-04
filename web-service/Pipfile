@@ -9,6 +9,7 @@ flask = "*"
 pandas = "==1.4.3"
 xgboost = "==1.5.1"
 requests = "*"
+gunicorn = "*"
 
 [dev-packages]
 

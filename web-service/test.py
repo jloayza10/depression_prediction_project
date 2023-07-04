@@ -1,5 +1,6 @@
 import predict
 import numpy as np
+from numpy import nan
 import requests
 
 user = {'steps_awake_mean': 1623.2857142857142,
@@ -169,14 +170,14 @@ user2 = {'steps_awake_mean': 10000.2857142857142,
         'sleep_in_bed_weekend_mean': 630.0,#637.5
         'sleep_ratio_asleep_in_bed_weekday_mean': 0.9899829072226788,
         'sleep_ratio_asleep_in_bed_weekend_mean': 0.9851912059155878,
-        'sleep_in_bed_iqr': np.nan,
-        'sleep_asleep_iqr': np.nan,
-        'sleep_ratio_asleep_in_bed_iqr': np.nan,
-        'steps_mvpa_iqr': np.nan,
-        'steps_lpa_iqr': np.nan,
+        'sleep_in_bed_iqr':'',
+        'sleep_asleep_iqr': '',
+        'sleep_ratio_asleep_in_bed_iqr': '',
+        'steps_mvpa_iqr': '',
+        'steps_lpa_iqr': '',
         'steps_awake_sum_iqr': 2062.75,
         'sleep_main_start_hour_adj_median': 22.0,
-        'sleep_main_start_hour_adj_iqr': np.nan,
+        'sleep_main_start_hour_adj_iqr': '',
         'sleep_main_start_hour_adj_range': 4.0,
         'sleep__hypersomnia_count_': 0,
         'sleep__hyposomnia_count_': 0,
@@ -188,9 +189,9 @@ user2 = {'steps_awake_mean': 10000.2857142857142,
         'steps__awake__sum__score': 0.028107950497963663,
         'steps__awake__sum__intercept': -1.195480417791993,
         'steps__awake__sum__coeff': -0.009476055314708447,
-        'steps__mvpa__sum__score': np.nan,
-        'steps__mvpa__sum__intercept': np.nan,
-        'steps__mvpa__sum__coeff': np.nan,
+        'steps__mvpa__sum__score': '',
+        'steps__mvpa__sum__intercept':'' ,
+        'steps__mvpa__sum__coeff': '',
         'steps__light_activity__sum__score': 0.224515360604567,
         'steps__light_activity__sum__intercept': -0.6695555236654173,
         'steps__light_activity__sum__coeff': -0.02301157833965633,
@@ -224,18 +225,18 @@ user2 = {'steps_awake_mean': 10000.2857142857142,
         'sleep_ratio_asleep_in_bed__score': 0.012619769757740817,
         'sleep_ratio_asleep_in_bed__intercept': 0.7471221303424257,
         'sleep_ratio_asleep_in_bed__coeff': 0.001505008063765974,
-        'sleep__main_start_hour_adj__score_': np.nan,
-        'sleep__main_start_hour_adj__intercept_': np.nan,
-        'sleep__main_start_hour_adj__coeff_': np.nan,
+        'sleep__main_start_hour_adj__score_': '',
+        'sleep__main_start_hour_adj__intercept_': '',
+        'sleep__main_start_hour_adj__coeff_': '',
         'steps__awake__sum__score_': 0.0007796705873003296,
         'steps__awake__sum__intercept_': -1.2824893579442629,
         'steps__awake__sum__coeff_': -0.0031120953774362026,
-        'steps__mvpa__sum__score_': np.nan,
-        'steps__mvpa__sum__intercept_': np.nan,
-        'steps__mvpa__sum__coeff_': np.nan,
-        'steps__light_activity__sum__score_': np.nan,
-        'steps__light_activity__sum__intercept_': np.nan,
-        'steps__light_activity__sum__coeff_': np.nan,
+        'steps__mvpa__sum__score_': '',
+        'steps__mvpa__sum__intercept_': '',
+        'steps__mvpa__sum__coeff_': '',
+        'steps__light_activity__sum__score_': '',
+        'steps__light_activity__sum__intercept_': '',
+        'steps__light_activity__sum__coeff_': '',
         'steps__rolling_6_sum__max__score_': 0.13570903048740157,
         'steps__rolling_6_sum__max__intercept_': -1.834417390186992,
         'steps__rolling_6_sum__max__coeff_': 0.09953796747579613,
@@ -245,27 +246,27 @@ user2 = {'steps_awake_mean': 10000.2857142857142,
         'steps__not_moving__sum__score_': 0.033894398611685306,
         'steps__not_moving__sum__intercept_': -0.7292041391539185,
         'steps__not_moving__sum__coeff_': -0.047363458366946116,
-        'sleep__nap_count__score_': np.nan,
-        'sleep__nap_count__intercept_': np.nan,
-        'sleep__nap_count__coeff_': np.nan,
-        'sleep__total_asleep_minutes__score_': np.nan,
-        'sleep__total_asleep_minutes__intercept_': np.nan,
-        'sleep__total_asleep_minutes__coeff_': np.nan,
-        'sleep__main_efficiency__score_': np.nan,
-        'sleep__main_efficiency__intercept_': np.nan,
-        'sleep__main_efficiency__coeff_': np.nan,
-        'sleep__awake__sum__score_': np.nan,
-        'sleep__awake__sum__intercept_': np.nan,
-        'sleep__awake__sum__coeff_': np.nan,
-        'sleep__total_in_bed_minutes__score_': np.nan,
-        'sleep__total_in_bed_minutes__intercept_': np.nan,
-        'sleep__total_in_bed_minutes__coeff_': np.nan,
-        'sleep__awake_regions__countDistinct__score_': np.nan,
-        'sleep__awake_regions__countDistinct__intercept_': np.nan,
-        'sleep__awake_regions__countDistinct__coeff_': np.nan,
-        'sleep_ratio_asleep_in_bed__score_': np.nan,
-        'sleep_ratio_asleep_in_bed__intercept_': np.nan,
-        'sleep_ratio_asleep_in_bed__coeff_': np.nan,
+        'sleep__nap_count__score_': '',
+        'sleep__nap_count__intercept_': '',
+        'sleep__nap_count__coeff_': '',
+        'sleep__total_asleep_minutes__score_': '',
+        'sleep__total_asleep_minutes__intercept_': '',
+        'sleep__total_asleep_minutes__coeff_': '',
+        'sleep__main_efficiency__score_': '',
+        'sleep__main_efficiency__intercept_': '',
+        'sleep__main_efficiency__coeff_': '',
+        'sleep__awake__sum__score_': '',
+        'sleep__awake__sum__intercept_': '',
+        'sleep__awake__sum__coeff_': '',
+        'sleep__total_in_bed_minutes__score_': '',
+        'sleep__total_in_bed_minutes__intercept_': '',
+        'sleep__total_in_bed_minutes__coeff_': '',
+        'sleep__awake_regions__countDistinct__score_': '',
+        'sleep__awake_regions__countDistinct__intercept_': '',
+        'sleep__awake_regions__countDistinct__coeff_': '',
+        'sleep_ratio_asleep_in_bed__score_': '',
+        'sleep_ratio_asleep_in_bed__intercept_': '',
+        'sleep_ratio_asleep_in_bed__coeff_': '',
         'steps_mvpa_sum_recent': 2.0,
         'sleep_asleep_mean_recent': 60.0,
         'sleep_in_bed_mean_recent': 61.5,
@@ -313,13 +314,16 @@ user2 = {'steps_awake_mean': 10000.2857142857142,
         'comorbid_neuropathic': 0.0,#0
         'comorbid_arthritis': 0.0,
         'id_month': '2197_6'}
-print(f'----------------------------Reading data from user with len: {len(user2)}----------------------------------------------')
-df = predict.read_data(user2)
-#print(f'-----------binning__money_neg_charac_sum^2: {df["binning__money_neg_charac_sum^2"].values}, Shape of df: {df.shape}-------------------------------')
-print(df)
-pred = predict.predict(df)
-print(pred)
+# print(f'----------------------------Reading data from user with len: {len(user2)}----------------------------------------------')
+# df = predict.read_data(user2)
+# #print(f'-----------binning__money_neg_charac_sum^2: {df["binning__money_neg_charac_sum^2"].values}, Shape of df: {df.shape}-------------------------------')
+# print(df)
+# pred = predict.predict(df)
+# print(pred)
 
-#url = 'http://localhost:9696/predict'
-#response = requests.post(url, json=user)
-#print(response.json())
+
+url = 'http://127.0.0.1:9696/predict'
+response = requests.post(url, json=user2)
+response.raise_for_status()
+print('Finished requests post')
+print(response.json())
