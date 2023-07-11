@@ -10,7 +10,7 @@ with open('final_preprocessor.bin', 'rb') as f_in:
 
 from feature_preprocessing import preprocess_dataframe, create_features, load_list_from_pkl, get_feature_names
 
-list_path = '../data/lists/'
+#list_path = '../data/lists/'
 
 
 def load_list_from_pkl(file_path):
@@ -27,8 +27,10 @@ def load_list_from_pkl(file_path):
         list_object = pickle.load(file)
     return list_object
 
-cols_to_del = load_list_from_pkl(list_path+'cols_to_del.pkl')
-selected_features_2 = load_list_from_pkl('../data/lists/selected_features_2.pkl')
+cols_to_del = load_list_from_pkl('cols_to_del.pkl')
+#cols_to_del = load_list_from_pkl(list_path+'cols_to_del.pkl')
+selected_features_2 = load_list_from_pkl('selected_features_2.pkl')
+#selected_features_2 = load_list_from_pkl('../data/lists/selected_features_2.pkl')
 
 
 def read_data(input):
