@@ -106,7 +106,7 @@ def counts(df):
         pandas.DataFrame: The DataFrame with new count-based features.
     """
     X = pd.DataFrame()
-    df_study = pd.read_pickle(r'../data/processed/df_study')
+    df_study = pd.read_pickle(r'df_study')
     #Intermediate column creation
     df['money_scaled'] = ((4-df_study['money'])/2) # divide max to 2; invert scale so that higher is better off
     #Counts columns
