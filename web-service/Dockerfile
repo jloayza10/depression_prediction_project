@@ -9,7 +9,7 @@ COPY [ "Pipfile", "Pipfile.lock", "./" ]
 
 RUN pipenv install --system --deploy
 
-COPY [ "predict.py", "xgboost_mod.bin", "./" ]
+COPY [ "df_study", "cols_to_del.pkl", "selected_features_2.pkl", "feature_preprocessing.py", "predict.py", "xgboost_mod.bin", "final_preprocessor.bin", "./" ]
 
 EXPOSE 9696
 
