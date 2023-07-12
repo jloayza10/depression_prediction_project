@@ -16,10 +16,37 @@ The following steps are performed as part of this machine learning project:
 - Visualizations
 - Feature Engineering
 - Feature Selection
-- Model Selection: In particular use of the xgboost model
-- Hyperparameter Tuning
+- Model Selection
+- Hyperparameter Tuning for xgboost model
 - Model Evaluation
-- Cross-Validation
+- Cross-Validation and nested cross-validation
+
+To be done:
+- Deal with class imbalance
+- Perform error analysis on final model
+- Train a simpler, smaller or faster model
+- Data allows to work on this orblem as a regression problem as well 
+
+The following steps are performed as part of the MLOps project:
+- Clone repo and work in unix virtual machine
+- virtual environment with pipenv
+- Flask app
+- Script .py file for input data reading and feature processing
+- gunicorn server deployment
+
+To be done:
+- Deploy model to an online app
+- Feature store
+- Experiment tracking, model registry and versioning
+- Workflow orchestration
+- CI/CD and testing
+
+## Results
+
+| Metric     | Adjacent Accuracy | Balanced Accuracy| Cohen-Kappa score| Weighted F1-score |
+| :----:     |    :----:         |   :----:         |     :----:       |     :----:        |
+| My results |     0.885         |     0.525        |      0.617       |      0.522        |
+| Paper      |     0.889         |     0.472        |      0.661       |      0.543        |
 
 ## References
 
