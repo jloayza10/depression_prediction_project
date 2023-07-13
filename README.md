@@ -1,6 +1,6 @@
 # Depression Prediction
 
-This is a machine learning project focused on analyzing and predicting the severity of depression using self-reported 1-year health data from a mental health observational study. The objective of this project is to replicate and extend the analysis performed in the research paper by Makhmutova et al. [1] and present a complete machine learning pipeline for depression prediction.
+This is a machine learning project focused on analyzing and predicting the severity of depression using self-reported 1-year health data from a mental health observational study. The objective of this project is to replicate and extend the analysis performed in the research paper by Makhmutova et al. [1] and present a complete machine learning pipeline for depression prediction. There is also some MLOps steps being currently performed.
 
 ## Dataset
 
@@ -21,11 +21,11 @@ The following steps are performed as part of this machine learning project:
 - Model Evaluation
 - Cross-Validation and nested cross-validation
 
-To be done:
+#### To be done:
 - Deal with class imbalance
 - Perform error analysis on final model
 - Train a simpler, smaller or faster model
-- Data allows to work on this orblem as a regression problem as well 
+- Data allows to work on this problem as a regression problem as well 
 
 The following steps are performed as part of the MLOps project:
 - Clone repo and work in unix virtual machine
@@ -34,7 +34,7 @@ The following steps are performed as part of the MLOps project:
 - Script .py file for input data reading and feature processing
 - gunicorn server deployment
 
-To be done:
+#### To be done:
 - Deploy model to an online app
 - Feature store
 - Experiment tracking, model registry and versioning
