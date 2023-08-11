@@ -21,6 +21,8 @@ The following steps are performed as part of this machine learning project:
 - Model Evaluation
 - Cross-Validation and nested cross-validation
 
+The necessary notebooks used are oredered and numbered accordingly. If no numbering is present, the notebook presents a parallel study.
+
 ## Results for xbgoost model
 
 | Metric     | Adjacent Accuracy | Balanced Accuracy| Cohen-Kappa score| Weighted F1-score |
@@ -28,7 +30,7 @@ The following steps are performed as part of this machine learning project:
 | My results |     0.885         |     0.525        |      0.617       |      0.522        |
 | Paper      |     0.889         |     0.472        |      0.661       |      0.543        |
 
-
+A 1-page pdf report with the main results and visualizations is available [here](https://github.com/jloayza10/depression_prediction_project/blob/main/1-page_Report.pdf).
 ### Valuable Takeaways
 
 - Directory machine learning project structure: use notebooks for exploring, testing and visualizing data, while scripts contain reusable functions
