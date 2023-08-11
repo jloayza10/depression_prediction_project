@@ -126,17 +126,53 @@ def plot_dist_by_money(df, save = False):
                     hue="phq9_cat_end", 
                     multiple="dodge", 
                     height=7, 
-                    aspect=2.5)
+                    aspect=1.75)
     #ax = g.facet_axis
     sns.move_legend(g, loc = "center left",labels=['4 (high severity)','3','2','1','0 (low severity)'],title="Depression Severity", bbox_to_anchor=(0.9, .51))
     g.set(xticks=range(0,5,1), xticklabels=["0: Better off","1","2","3","4: Worse off"])
     g.fig.suptitle('Distribution of depression severity by economic situation', fontsize=20, y=1.05)
-    plt.xticks(fontsize=16)
-    plt.yticks(fontsize=16)
+    plt.xticks(fontsize=18)
+    plt.xlabel('Economic situation', fontsize=20)
+    plt.yticks(fontsize=18)
+    plt.ylabel('Total', fontsize=20)
     if save:
         title_fig = 'target_distribution_by_economy'
         g.figure.savefig(fig_path+title_fig,bbox_inches='tight')
     
+def plot_count(df,feature, save = False):
+    if feature=='sex':
+        normalized_df = df[feature].value_counts(normalize=True)*100
+        title='Dataset gender distribution: total and by percentage'
+        xticklabels=["Female","Male","Other"]
+        title_fig = 'plot_count_sex'
+    if feature == 'race':
+        test_df = pd.DataFrame((df[['race_white','race_black','race_hispanic','race_asian','race_other']]).astype(int).idxmax(1))
+        test_df = test_df.rename(columns={0: "race"})
+        normalized_df = test_df.value_counts(normalize=True)*100
+        title ='Dataset race distribution: total and by percentage'
+        xticklabels = ["White","Black","Hispanic","Asian","Other"]
+        title_fig = 'plot_count_race'
+        df = test_df
+        
+    
+    plt.figure(figsize=(9,6))
+    g = sns.countplot(x=feature, data=df, order=df[feature].value_counts().index)
+    g.set(xticklabels=xticklabels)
+    plt.title(label = title,fontsize=20)
+    plt.xticks(fontsize=20)
+    plt.yticks(fontsize=20)
+    plt.xlabel('', fontsize=20)
+    plt.ylabel('Total', fontsize=20)
+    for a, rect in zip(normalized_df, g.patches):
+        h = rect.get_height()
+        w = rect.get_width()
+        x = rect.get_x()
+        y = rect.get_y()
+        if h>0:
+            g.annotate(f'{float(a):.1f}%', xy=(x + w/2,y +h/2), xytext=(0, 0), textcoords='offset points', ha='center', va='center', fontsize=20)
+    if save:
+        g.figure.savefig(fig_path+title_fig,bbox_inches='tight')
+
 def save_list_to_pkl(list_object, path, file_name):
     """
     Save a list object as a pickle file.
